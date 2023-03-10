@@ -1,5 +1,5 @@
 {
-  "name": "adrians-music-collection",
+  "name": "jordans-music-collection",
   "version": "1.0.0",
   "scripts": {
     "dev": "svelte-kit dev",

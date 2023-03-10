@@ -22,7 +22,7 @@
   import { onDestroy } from 'svelte';
   import { activePage } from 'src/modules/list/store/store';
 
-  import { ALBUM_URL } from 'src/constants/hosting';
+  import { ALBUM_URL, USER_NAME, TWITTER_USER } from 'src/constants/hosting';
 
   export let album;
 
@@ -40,15 +40,15 @@
 {#key album.id}
   <MetaTags
     openGraph={{
-      site_name: "Adrian's Music Collection",
+      site_name: "{USER_NAME}'s Music Collection",
       url: `${ALBUM_URL}/${album.id}`,
       images: [{ url: album.images[0].resource_url }],
       title: `${album.artists_sort?.replace(/\(.\d?\)/, '')} - ${
         album.title
-      } | Adrian's Music Collection`,
+      } | {USER_NAME}'s Music Collection`,
       description: `${album.formats.map(
         ({ name }) => name,
-      )} from Adrian Bece's personal collection. This is "${
+      )} from {USER_NAME} Rogers' personal collection. This is "${
         album.title
       }" album by ${album.artists_sort?.replace(
         /\(.\d?\)/,
@@ -61,10 +61,10 @@
     }}
     title={`${album.artists_sort?.replace(/\(.\d?\)/, '')} - ${
       album.title
-    } | Adrian's Music Collection`}
+    } | {USER_NAME}'s Music Collection`}
     description={`${album.formats.map(
       ({ name }) => name,
-    )} from Adrian Bece's personal collection. This is "${
+    )} from {USER_NAME} Rogers' personal collection. This is "${
       album.title
     }" album by ${album.artists_sort?.replace(
       /\(.\d?\)/,
@@ -76,10 +76,7 @@
     }. Genre(s): ${album.styles?.join(', ')}`}
     twitter={{
       cardType: 'summary_large_image',
-      handle: '@AdrianBeceDev',
-    }}
-    facebook={{
-      appId: '298638565596264',
+      handle: '@{TWITTER_USER}',
     }}
   />
 {/key}

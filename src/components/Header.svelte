@@ -1,12 +1,12 @@
 <script>
   import Switcher from 'src/modules/theme/components/Switcher.svelte';
-
+  import { USER_NAME } from 'src/constants/hosting';
   export let href = '/';
 </script>
 
 <header class="header">
   <a class="header__link" {href}>
-    <h1 class="header__logo">Adrian's Music Collection</h1>
+    <h1 class="header__logo">{USER_NAME}'s Music Collection</h1>
   </a>
 
   <Switcher />

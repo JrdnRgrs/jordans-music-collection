@@ -4,7 +4,7 @@
   import { onDestroy } from 'svelte';
   import { setTheme } from '../store/actions';
 
-  var currentTheme = 'light';
+  var currentTheme = 'dark';
 
   const unsubscribe = theme.subscribe((value) => {
     currentTheme = value;

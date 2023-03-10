@@ -9,7 +9,7 @@
   import { fetchAlbums } from 'src/modules/list/services/fetchAlbums';
   import { sortBy, sortDirection } from 'src/modules/list/store/store';
   import { onDestroy } from 'svelte';
-  import { BASE_URL } from 'src/constants/hosting';
+  import { BASE_URL, USER_NAME, TWITTER_USER } from 'src/constants/hosting';
 
   let sortByValue;
   let sortDirectionValue;
@@ -34,11 +34,11 @@
 </script>
 
 <MetaTags
-  title={`Adrian's Music Collection`}
-  description="Adrian's Music Collection contains up-to-date list of Adrian Bece's LP and CD collection with detailed information about each collection item."
+  title={`${USER_NAME}'s Music Collection`}
+  description="{USER_NAME}'s Music Collection contains up-to-date list of {USER_NAME}'s LP collection with detailed information about each collection item."
   openGraph={{
     type: 'website',
-    title: `Adrian's Music Collection`,
+    title: `{USER_NAME}'s Music Collection`,
     url: BASE_URL,
     images: [
       {
@@ -46,15 +46,12 @@
       },
     ],
     description:
-      "Adrian's Music Collection contains up-to-date list of Adrian Bece's LP and CD collection with detailed information about each collection item.",
-    site_name: "Adrian's Music Collection",
+      "{USER_NAME}'s Music Collection contains up-to-date list of {USER_NAME}'s LP collection with detailed information about each collection item.",
+    site_name: "{USER_NAME}'s Music Collection",
   }}
   twitter={{
     cardType: 'summary_large_image',
-    handle: '@AdrianBeceDev',
-  }}
-  facebook={{
-    appId: '298638565596264',
+    handle: '@{TWITTER_USER}',
   }}
 />
 <Header />

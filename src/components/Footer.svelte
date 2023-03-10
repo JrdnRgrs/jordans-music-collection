@@ -1,11 +1,45 @@
 <script>
   const year = new Date().getFullYear();
+  import { TWITTER_USER, LINKEDIN_USER, GITHUB_USER } from 'src/constants/hosting';
+
 </script>
 
 <footer class="footer">
   <section class="footer__wrapper">
+    <ul class="footer__links">
+      <li class="footer__item">
+        <a
+          href="https://twitter.com/{TWITTER_USER}"
+          target="_blank"
+          class="footer__link"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-twitter" />
+        </a>
+      </li>
+      <li class="footer__item">
+        <a
+          href="https://www.linkedin.com/in/{LINKEDIN_USER}/"
+          target="_blank"
+          class="footer__link"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-linkedin-in" />
+        </a>
+      </li>
+      <li class="footer__item">
+        <a
+          href="https://github.com/{GITHUB_USER}"
+          target="_blank"
+          class="footer__link"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github-alt" />
+        </a>
+      </li>
+    </ul>
     <article class="footer__content">
-      Created with <i class="fa-solid fa-heart footer__icon" /> and
+      Originally created with <i class="fa-solid fa-heart footer__icon" /> and
       <i class="fa-solid fa-music footer__icon" />
       by
       <a
@@ -17,38 +51,6 @@
         Adrian Bece
       </a>
     </article>
-    <ul class="footer__links">
-      <li class="footer__item">
-        <a
-          href="https://twitter.com/AdrianBeceDev"
-          target="_blank"
-          class="footer__link"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-twitter" />
-        </a>
-      </li>
-      <li class="footer__item">
-        <a
-          href="https://www.linkedin.com/in/adrianbece/"
-          target="_blank"
-          class="footer__link"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-linkedin-in" />
-        </a>
-      </li>
-      <li class="footer__item">
-        <a
-          href="https://github.com/codeAdrian"
-          target="_blank"
-          class="footer__link"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-github-alt" />
-        </a>
-      </li>
-    </ul>
   </section>
 </footer>
 

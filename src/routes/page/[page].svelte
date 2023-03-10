@@ -10,7 +10,7 @@
   import AlbumList from 'src/modules/list/components/AlbumList.svelte';
   import Header from 'src/components/Header.svelte';
   import { MetaTags } from 'svelte-meta-tags';
-  import { BASE_URL, PAGE_URL } from 'src/constants/hosting';
+  import { BASE_URL, PAGE_URL, USER_NAME, TWITTER_USER } from 'src/constants/hosting';
 
   let query;
   let sortByValue;
@@ -48,8 +48,8 @@
 </script>
 
 <MetaTags
-  title={`Adrian's Music Collection | Page ${currentPage}`}
-  description="Adrian's Music Collection contains up-to-date list of Adrian Bece's LP and CD collection with detailed information about each collection item."
+  title={`{USER_NAME}'s Music Collection | Page ${currentPage}`}
+  description="{USER_NAME}'s Music Collection contains up-to-date list of {USER_NAME}'s LP collection with detailed information about each collection item."
   openGraph={{
     url: `${PAGE_URL}/${currentPage}`,
     images: [
@@ -58,17 +58,14 @@
       },
     ],
     type: 'website',
-    title: `Adrian's Music Collection | Page ${currentPage}`,
+    title: `{USER_NAME}'s Music Collection | Page ${currentPage}`,
     description:
-      "Adrian's Music Collection contains up-to-date list of Adrian Bece's LP and CD collection with detailed information about each collection item.",
-    site_name: "Adrian's Music Collection",
+      "{USER_NAME}'s Music Collection contains up-to-date list of {USER_NAME}'s LP collection with detailed information about each collection item.",
+    site_name: "{USER_NAME}'s Music Collection",
   }}
   twitter={{
     cardType: 'summary_large_image',
-    handle: '@AdrianBeceDev',
-  }}
-  facebook={{
-    appId: '298638565596264',
+    handle: '@{TWITTER_USER}',
   }}
 />
 
