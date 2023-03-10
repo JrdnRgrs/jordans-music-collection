@@ -11,3 +11,5 @@ export const TWITTER_USER = `${import.meta.env.VITE_TWITTER}`;
 export const LINKEDIN_USER = `${import.meta.env.VITE_LINKEDIN}`;
 
 export const GITHUB_USER = `${import.meta.env.VITE_GITHUB}`;
+
+export const STREAM_URL = `${import.meta.env.VITE_STREAM_URL}`;

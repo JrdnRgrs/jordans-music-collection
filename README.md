@@ -39,6 +39,7 @@ These are changes that I have made to this repo from the original:
   - `TWITTER_USER`: The Twitter username of the site owner (for footer and meta tags)
   - `LINKEDIN_USER`: The LinkedIn profile name of the site owner (for footer and meta tags)
   - `GITHUB_USER`: The Github username of the site owner (for footer and meta tags)
+  - `STREAM_URL`: An icecast stream url to play audio from when the Play button is clicked.
   - Env vars must be prefixed with `VITE_` in the `.env` file to import
   - To use env vars in `.ts` files, use format: `${import.meta.env.VITE_API_KEY}`. To use in `.svelte` files, import in a script block and then use format: `{USER_NAME}` in the html block.
 - Changed site title (and meta tags) to the USER_NAME
