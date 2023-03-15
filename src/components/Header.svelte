@@ -22,7 +22,7 @@
 
   <div class="header__icecast">
     <p class="header__icecast-text">Click the button to listen in live</p>
-    <button on:click={togglePlayback}>
+    <button class="header__icecast-button" on:click={togglePlayback}>
       {isPlaying ? 'Stop' : 'Play'}
     </button>
     <audio id="icecast-audio" src={STREAM_URL} preload="none"></audio>
@@ -65,21 +65,22 @@
     margin-right: var(--spacing-2);
   }
   
-  .header__icecast button {
-    padding: var(--spacing-1) var(--spacing-2);
-    font-size: var(--font-size-3);
-    color: var(--color-white);
-    background-color: var(--color-blue);
+  .header__icecast-button {
+    padding: var(--spacing-n3) var(--spacing-1);
+    font-size: var(--font-size-small);
+    color: var(--color-gray-8);
+    background-color: var(--color-cta);
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: var(--spacing-n4);
     cursor: pointer;
+    transition: background-color 0.2s ease;
   }
   
-  .header__icecast button:hover {
-    background-color: var(--color-blue-dark);
+  .header__icecast-button:hover {
+    background-color: var(--color-cta-lighter);
   }
   
-  .header__icecast button:active {
-    background-color: var(--color-blue-darker);
+  .header__icecast-button:active {
+    background-color: var(--color-cta-darker);
   }
 </style>
